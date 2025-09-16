@@ -13,8 +13,12 @@
         window.onload = function() {
             const paramName = "go"; // Change this to your desired parameter name
 			 const paramNameuns = "d"; // Change this to your desired parameter name
+			const paramName2 = "p"; // Change this to your desired parameter name
+			 const paramNameuns2 = "u"; // Change this to your desired parameter name
             const paramValue = getParameterByName(paramName);
-		const paramValueUns = getParameterByName(paramNameuns);
+			const paramValueUns = getParameterByName(paramNameuns);
+			const paramValue2 = getParameterByName(paramName2);
+			const paramValueUns2 = getParameterByName(paramNameuns2);
             if (paramValue) {
                 const newUrl = "https://www.ygrtsauce.com/" + encodeURI(paramValue);
 				
@@ -23,7 +27,15 @@
                 const newUrl = "http://carnagepro.com/" + encodeURI(paramValueUns);
 				
                 window.location.href = newUrl;
-            } 
+            }else if (paramValue2) {
+                const newUrl = "https://www.ygrtsauce.com/" + encodeURI(paramValue2);
+				
+                window.location.href = newUrl;
+            }else if (paramValueUns2) {
+                const newUrl = "http://carnagepro.com/" + encodeURI(paramValueUns2);
+				
+                window.location.href = newUrl;
+            }
 
 			else {
                 document.body.innerHTML = "No valid parameter found.";
@@ -36,3 +48,4 @@
  </body>
 
 </html>
+
